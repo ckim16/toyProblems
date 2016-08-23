@@ -11,7 +11,5 @@ function allAnagrams(str) {
     }
   }
   generator('', str);
-  console.log('ana', anagram);
   return Object.keys(anagram);
 }
-allAnagrams('abc');
