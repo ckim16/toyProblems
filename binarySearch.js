@@ -3,7 +3,6 @@ function binarySearch(array, target) {
  
   function recurse(low, high) {
     var middle = Math.floor((low + high)/2);
-    console.log(middle)
     if(low > high) {
       return -1;
     }
