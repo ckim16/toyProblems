@@ -19,5 +19,5 @@ function longestRun(str) {
       longestLetter = arr[i];
     }
   }
-  return [str.indexOf(longestLetter[0]), str.indexOf(longestLetter[0])+longest-1]
+  return [str.indexOf(longestLetter[0]), str.indexOf(longestLetter[0])+longest-1];
 }
