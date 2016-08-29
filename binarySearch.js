@@ -18,4 +18,3 @@ function binarySearch(array, target) {
   }
   return recurse(0, array.length-1); 
 }
-binarySearch([11,12,13,14,15], 12);
