@@ -12,4 +12,3 @@ function commonCharacters(str1, str2) {
   }
   return result;
 }
-commonCharacters('', 'No more')
