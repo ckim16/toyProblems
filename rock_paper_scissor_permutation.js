@@ -13,6 +13,5 @@ function rockPaperScissorPermutation(round) {
     }
   }
   recursion('');
-  console.log('result', result)
   return result;
 }
