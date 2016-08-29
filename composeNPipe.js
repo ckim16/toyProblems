@@ -14,5 +14,5 @@ var pipe = function() {
     return fns.reduce(function(prev, next) {
       return next(prev); 
     }, val);
-  }
+  };
 };
