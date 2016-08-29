@@ -7,4 +7,4 @@ Array.prototype.isSubsetOf = function(inputArray) {
     }
   }
   return exist;
-}
+};
