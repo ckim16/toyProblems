@@ -15,5 +15,5 @@ Function.prototype.bind = function(context) {
     var output = Array.prototype.slice.call(arguments);
     var pass = args.concat(output);
     return fn.apply(context, pass);
-  }
+  };
 };
