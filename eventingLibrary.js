@@ -18,4 +18,4 @@ var mixEvents = function(obj) {
   };
 
   return obj;
-}
+};
