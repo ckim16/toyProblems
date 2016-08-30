@@ -31,7 +31,7 @@ var hasBadwords = function (message, index) {
       }
    }
    return false;
-}
+};
  
 // Tell us what the output is from running this code:
 console.log(sentences.map(function (sentence, index) {
