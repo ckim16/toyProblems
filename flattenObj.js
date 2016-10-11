@@ -7,14 +7,14 @@ function flattenObj(input) {
       result[key] = obj;
     } else {
       var keys = Object.keys(obj);
-      keys.forEach(function(element) {
+      keys.forEach(function(ele) {
         var input;
         if(key === '') {
           input = '';
         } else {
           input = '.';
         }
-        recursion(obj[element], key + input + element);
+        recursion(obj[ele], key + input + ele);
       });
     }
   }
