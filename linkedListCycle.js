@@ -1,17 +1,19 @@
 'use strict';
 function linkedListCycle(linkedList) {
-  var pointer1 = linkedList;
-  var pointer2 = linkedList;
+  var fast = linkedList;
+  var slow = linkedList;
   var pause = true;
 
-  while(pointer1 = pointer1.next) {
-    if(pointer1 === pointer2) {
+  while(fast.next !== null) {
+    fast = fast.next;
+    if(fast === slow) {
       return true;
     }
 
     if(!pause) {
-      pointer2 = pointer2.next;
+      slow = slow.next;
     }
+
     pause = !pause;
   }
   return false;
