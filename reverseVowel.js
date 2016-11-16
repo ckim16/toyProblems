@@ -17,3 +17,34 @@ function reverseVowel(str) {
   }
   return str.join('');
 }
+
+//optimized..
+
+function reverseVowelOpt(str) {
+  var startIdx = 0;
+  var endIdx = str.length-1;
+  var strArr = str.split('');
+
+  function isVowel(letter) {
+    letter = letter.toLowerCase();
+    return (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u');
+  }
+  
+  while (startIdx < endIdx) {
+    while(startIdx < endIdx && !isVowel(str[startIdx])) {
+      startIdx++;
+    }
+
+    while(startIdx < endIdx && !isVowel(str[endIdx])) {
+      endIdx--;
+    }
+    if(str[startIdx] !== str[endIdx]) {
+      var temp= strArr[startIdx];
+      strArr[startIdx] = strArr[endIdx];
+      strArr[endIdx] = temp;
+    }
+    startIdx++;
+    endIdx--;
+  }
+  return strArr.join('');
+}
