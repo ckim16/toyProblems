@@ -5,12 +5,12 @@ function removeDuplicatLL(linkedList) {
   var node = linkedList;
 
   while (node.next !== null) {
-    if (hash[node.val]) {
-      prev.next = node.next;
-    } else {
+    if (!hash[node.val]) {
       hash[node.val] = true;
-      prev = node;
+    } else {
+      prev.next = node.next;
     }
+    prev = node;
     node = node.next;
   }
 }
