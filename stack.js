@@ -26,3 +26,28 @@ Stack.prototype.returnMin = function() {
 Stack.prototype.size = function() {
   return this.len;
 }
+
+Stack.prototype.sort = function() {
+  var end = this.len;
+  var temp;
+  for(var i = 0; i < end - 1; i++) {
+    for(var j = i+1; j < end; j++) {
+      if (this.store[i] > this.store[j]) {
+        temp = this.store[i];
+        this.store[i] = this.store[j];
+        this.store[j] = temp;
+      }
+    }
+  }
+};
+
+var stack = new Stack();
+stack.push(2);
+stack.push(1);
+stack.push(7);
+stack.push(3);
+stack.push(9);
+stack.push(4);
+console.log('1', stack);
+stack.sort();
+console.log('sort', stack);
